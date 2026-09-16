@@ -2,8 +2,7 @@
 
 A modern, animated personal portfolio website built with React, TypeScript, and Framer Motion.
 
-🌐 **Live at:** `http://localhost:5173` (dev) · deploy to Vercel/Netlify for a public URL
-
+🌐 **Live at:** https://riyasharma07.github.io/About-Me/
 ---
 
 ## Tech Stack
