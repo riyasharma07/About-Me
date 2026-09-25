@@ -118,3 +118,18 @@ npm run build
 ## Contact
 
 **Riya Sharma** · sharmariyasharma1039@gmail.com · Gurugram, India
+
+## Iris – AI assistant
+
+Iris is a chat widget (`src/components/Iris.tsx`) backed by a Vercel serverless function (`api/iris.ts`) that uses LangChain + Google Gemini. Its knowledge is built from `src/data/portfolio.ts` (plus `extraFacts` in `api/_lib/knowledge.ts`), so updating the site data updates Iris.
+
+**Deploy the API to Vercel**
+1. Import this repo in Vercel and set the Root Directory to `portfolio`.
+2. Add the backend env vars from `.env.example` (`GOOGLE_API_KEY`, optional `GEMINI_MODEL`, `ALLOWED_ORIGINS`).
+3. Deploy, then check `https://<project>.vercel.app/api/iris`.
+
+**Point the site at it**
+- Create `portfolio/.env.production.local` with `VITE_IRIS_API_URL=https://<project>.vercel.app/api/iris`, then `npm run deploy`.
+
+**Local development**
+- `npx vercel dev` runs the site and the function together (put `GOOGLE_API_KEY` in `.env.local`).

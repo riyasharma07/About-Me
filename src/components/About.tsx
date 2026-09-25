@@ -70,7 +70,7 @@ export default function About() {
 
               <div className="space-y-4">
                 <p className="text-slate-300 text-lg leading-relaxed">
-                  I'm a <span className="text-neon-cyan font-semibold">Software Engineer</span> with 3+ years of experience building high-throughput backend systems at{' '}
+                  I'm a <span className="text-neon-cyan font-semibold">Software Development Engineer - 2</span> with 4+ years of experience building high-throughput backend systems at{' '}
                   <span className="text-white font-semibold">FieldAssist</span>. My work powers a Distributor Management System serving{' '}
                   <span className="text-neon-purple font-semibold">85,000+ daily active users</span> at 800+ RPS.
                 </p>

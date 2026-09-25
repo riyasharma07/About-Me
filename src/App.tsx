@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Iris from './components/Iris';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <Iris />
       </div>
     </div>
   );
