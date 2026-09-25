@@ -4,7 +4,7 @@
 //
 // Env vars (set in Vercel → Project → Settings → Environment Variables):
 //   GOOGLE_API_KEY (free from https://aistudio.google.com/apikey)
-//   GEMINI_MODEL (optional, defaults to gemini-flash-latest)
+//   GEMINI_MODEL (optional, defaults to gemini-flash-lite-latest)
 //   ALLOWED_ORIGINS (optional, comma-separated)
 import { ChatGoogleGenerativeAI } from '@langchain/google-genai';
 import { AIMessage, HumanMessage, SystemMessage } from '@langchain/core/messages';
@@ -64,7 +64,7 @@ let model: ChatGoogleGenerativeAI | undefined;
 function getModel(): ChatGoogleGenerativeAI {
   // Reads GOOGLE_API_KEY from the environment automatically.
   model ??= new ChatGoogleGenerativeAI({
-    model: process.env.GEMINI_MODEL ?? 'gemini-flash-latest',
+    model: process.env.GEMINI_MODEL ?? 'gemini-flash-lite-latest',
     temperature: 0.3,
     maxOutputTokens: 1024,
   });
@@ -96,6 +96,10 @@ export async function POST(request: Request): Promise<Response> {
     stream = await getModel().stream(langchainMessages);
   } catch (err) {
     console.error('Iris model error', err);
+    // Free-tier quota exhausted: tell the visitor to retry rather than a vague failure.
+    if ((err as { status?: number }).status === 429) {
+      return json(429, "Iris is getting a lot of questions right now — please try again in a minute.");
+    }
     return json(502, 'Iris is having trouble thinking right now.');
   }
 
