@@ -1,13 +1,13 @@
 export const personalInfo = {
   name: "Riya Sharma",
-  title: "Software Engineer",
+  title: "Software Development Engineer - 2",
   roles: ["Backend Engineer", "Microservices Architect", "AI Agentic Workflow Engineer", "Cloud & DevOps Enthusiast"],
   location: "Gurugram, India",
   email: "official5riyasharma@gmail.com",
   phone: "+91-8929741039",
-  linkedin: "https://www.linkedin.com/in/riya-sharma",
-  github: "https://github.com/riyasharma07/About-Me",
-  bio: "Passionate Software Engineer specializing in high-throughput backend systems, microservices architecture, and AI-powered applications. I build scalable solutions that serve 85,000+ daily active users and deliver measurable impact.",
+  linkedin: "https://www.linkedin.com/in/riya-sharma-2a2a48186/",
+  github: "https://github.com/riyasharma07",
+  bio: "Software Development Engineer - 2 specializing in high-throughput backend systems, microservices architecture, and AI-powered applications. I build scalable solutions that serve 85,000+ daily active users and deliver measurable impact.",
   stats: [
     { label: "Daily Active Users", value: "85K+" },
     { label: "RPS in Production", value: "800+" },
@@ -65,8 +65,12 @@ export const techStack = [
 export const experiences = [
   {
     company: "FieldAssist",
-    role: "Software Developer",
+    role: "Software Development Engineer - 2",
     period: "Aug 2022 – Present",
+    roleHistory: [
+      { role: "Software Development Engineer - 2", period: "Apr 2026 – Present" },
+      { role: "Software Developer", period: "Aug 2022 – Mar 2026" },
+    ],
     location: "Gurugram, Haryana",
     type: "Full-time",
     projects: [
@@ -109,6 +113,11 @@ export const experiences = [
             title: "Cloud & DevOps",
             desc: "Deployed on Kubernetes (AKS) with HPA auto-scaling, Grafana & Sentry observability, and automated release notes via Azure DevOps + Slack.",
           },
+          {
+            icon: "🌙",
+            title: "Automated Scheduling",
+            desc: "Built a midnight report scheduler triggering bulk generation during off-peak hours, so reports are ready by morning.",
+          },
         ],
       },
       {
@@ -134,6 +143,27 @@ export const experiences = [
             icon: "🎯",
             title: "AI Stock Allocation Engine",
             desc: "Developed AI-driven decision automation workflows integrating LLM reasoning with rule-based inventory logic.",
+          },
+        ],
+      },
+      {
+        name: "Backend Foundations (Software Developer)",
+        tech: ["NestJS", "TypeScript", "SQL", "Redis", "RabbitMQ", "Azure", "Tally"],
+        highlights: [
+          {
+            icon: "🔌",
+            title: "Enterprise Integrations",
+            desc: "Developed scalable backend services and integrated Node.js applications with third-party enterprise systems including Tally.",
+          },
+          {
+            icon: "🗄️",
+            title: "Redis Caching & Query Tuning",
+            desc: "Implemented Redis caching and query optimization, improving performance and reducing database load.",
+          },
+          {
+            icon: "🐞",
+            title: "Asana Bug Project Lead",
+            desc: "Led the Asana bug project, reducing issue resolution time by 95%.",
           },
         ],
       },

@@ -61,6 +61,17 @@ export default function Experience() {
                     <div>
                       <h3 className="text-2xl font-black text-white">{exp.company}</h3>
                       <div className="text-neon-cyan font-semibold">{exp.role}</div>
+                      {exp.roleHistory && (
+                        <div className="mt-2 flex flex-col gap-1">
+                          {exp.roleHistory.map((r, ri) => (
+                            <div key={r.role} className="flex items-center gap-2 text-xs">
+                              <span className={`w-1.5 h-1.5 rounded-full ${ri === 0 ? 'bg-neon-green' : 'bg-slate-500'}`} />
+                              <span className={ri === 0 ? 'text-white' : 'text-slate-400'}>{r.role}</span>
+                              <span className="font-mono text-slate-500">{r.period}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col sm:items-end gap-1.5 text-sm">
